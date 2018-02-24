@@ -1,0 +1,236 @@
+/*
+	This file is the styleSheet for my Lego-application website.
+		It will however also be used for the first incarnation of
+	my portfolio website, in order to create consistency and because 
+	of time spend on coding.
+*/
+@media screen and (min-width:1000px){
+.navigation{
+	width:1000px;
+}
+.footer{
+	width:900px;
+}
+.navigation h1{
+	font-size:40px;
+}
+}
+
+@media screen and (max-width:800px){
+.imgNav{
+	min-width:30%;
+	clear:both;
+	border-bottom-style:solid;
+}
+
+.imgNav:hover .content{		
+	display:inline-block;
+	left:30%;
+	top:0;
+	width:70%;
+
+}
+
+.footer{
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#mobileFooter{
+		width:40%;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+.footerContent{
+	clear:both;
+	min-width:100%;
+	margin:10px;
+	top:10px;
+}
+
+.navigation h1{
+	font-size:1.5em;
+}
+
+}
+	
+	
+	
+	
+h1{
+	font-size:3vw;
+	vertical-align:middle;
+}
+.background{
+	position:relative;
+	margin:auto;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	max-width:40em;
+	z-index:-100;
+}
+.slideShow{
+	width:100%;
+	max-width: 50em;
+	position: relative;
+	margin: auto;	
+}
+	.slide{
+
+	}
+		/* Fading animation */
+	.fade {
+	  -webkit-animation-name: fade;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: fade;
+	  animation-duration: 3.5s;
+	}
+		@-webkit-keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+
+.navigation{
+	position:relative;
+/*	display:inline-block;*/
+	z-index:0;
+	left:0px;
+	top:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+	.imgNav{
+		width:24.375%;
+		height: 9.5vw;
+		text-align:center;
+/*		background-color:RGB(175,175,175);*/
+		border-width:0.1em;
+		border-right-style:solid;
+		border-color:RGB(150,150,150);
+		float:left;
+		display:inline-block;
+		vertical-align:bottom;
+	}
+		.imgNav2{
+			
+		}
+		/*.imgNav:link{
+			background-color:green;width:300px;
+			top:20px;
+			left:20px;
+		}*/
+		.imgNav:hover .content{
+			display:inline-block;
+		}
+	
+	.navLink{
+		vertical-align:bottom;
+	}
+
+.content{
+	display:none;
+	position:absolute;
+	background-color:lightgray;
+	width:97.74%;
+/*	margin:1px;*/
+	padding-left:5%
+	z-index:1;
+	left:0.1%;
+	top:9.5vw;
+	text-align:left;
+	color:RGB(50,50,50);
+	/*top:9.5vw;*/
+}
+	.contentBlock{
+		float:left;
+		width:42%;
+		margin-left:3%
+	}
+	.PpageIMG{
+		padding:10px;
+		padding-top:20px;
+	}
+.footer{
+	position:relative;
+	text-align:center;
+	z-index:-14;
+	top:25em;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:900px;
+	height:100px;
+	border-style:solid none none none;
+}
+
+	.footerLink{
+		color:gray;
+		text-decoration:none;
+	}
+		.footerLink:hover{
+			color:red;
+		}
+		.footerLink:active{
+			color:red;
+		}
+		.footerLink:visited{
+			/*color:blue;*/
+		}
+	.footerText{
+		color:gray;
+		text-decoration:none;	
+	}
+	.footerContent{
+		top:100px;
+		width:32%;
+		float:left;
+	}
+	.footerHead{
+		color:RGB(10,10,10);
+		float:top;
+	}
+
+
+
+#link:hover{
+	background-color:RGB(240,242,245);
+	
+}
+#content{
+	background-color:RGB(240,242,245);
+}
+#linkLEGO{
+	border-style:none;
+	background-image:BrickMotive.png;
+}
+#linkLEGO:hover{
+	background-color:RGB(230,200,200);
+}
+#contentLEGO{
+	background-color:RGB(230,200,200);
+}
+#imgLEGO:hover{
+	background-image:url("visual\_DSC2315.JPG");
+	background-size:20px;
+}
+
+#backgroundImage{
+	width:100%;
+	max-height:100%;	
+}
+
+ul{
+	list-style-type:none;
+}
+li{
+	float:left;
+}

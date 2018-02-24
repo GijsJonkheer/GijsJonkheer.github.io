@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Jonkheer Portfolio</title>
+	<link rel="stylesheet" style="text/css" href="new1.css">
+	<link rel="stylesheet" style="text/css" href="portfolioPage.css">
+	
+	
+</head>
+<body>
+<!-- have no clue why this does not work???-->
+<div style="z-index:200;">
+	<a href="PP.html">
+		<img source="Logo.JPG" width="500px" class="PpageIMG">
+	</a>
+</div>
+
+	<div class="background">
+		<!-- put a slideshow here! -->
+		<div class="slideShow">
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+			<a href="" class="slide fade"><img scr="visuals\Portfolio\Design projects\Bag_Trolley.JPG" class="slide"></a>
+		</div>
+		
+		<!-- buttons for slides -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>		
+	</div>
+
+	
+	<div class="ProjectContent">
+		<div class="briefing">
+		</div>
+		<div class="Ideas">
+		</div>
+		<div class="Embodiment">
+		</div>
+		<div class="Tests">
+		</div>
+		<div class="Result">
+		</div>
+	</div>
+	
+	
+	<div class="footer">
+		<div class="footerContent">
+			<span class="footerHead">More about me</span><br>
+			<a class="footerLink" href="https://www.linkedin.com/in/gijs-jonkheer-b64889104/">LinkedIn</a><br>
+			<a class="footerLink" href=https://www.flickr.com/photos/93518101@N02/">Flickr</a>			<br>
+		</div>
+		<div class="footerContent">
+			<span class="footerHead">Contact</span><br>
+			<a class="footerLink" href="mailto:jonkheermocs@gmail.com">email</a><br>
+			<span class="footerText"> +31 6262 06 172</span><br>
+		</div>
+		<div class="footerContent">
+			<span class="footerHead">References</span><br>
+			<a class="footerLink" href="https://www.paperfoam.com">Paperfoam</a><br>
+			<a class="footerLink" href="something.html">Portfolio</a><br>
+		</div>
+	</div>
+	
+	
+	<script>	<!-- script for slideshow funciton -->
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("slide");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+</body>
+</html>
