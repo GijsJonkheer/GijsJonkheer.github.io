@@ -3,20 +3,54 @@
 <head>
     <script>
         // define functions for updating external file and current webpage
-        function writeToCommentFile(){
-            //something
+        function writeToFile(url){
+            var xhttp = new XMLHttpRequest();
+            var newFileContent = function(){    xhttp.open("GET",url,true); xhttp.send; };
+            xhttp.onreadystatechange = function(){  if (this.readystate == 4 && this.status == 200){    this.responsetext = //input from textarea ; }   };
+            xhttp.open("POST",url,true);
+            xhttp.send(newFileContent);
         }
-        function updateComments(){
-            document.getElementById("lastComments").innerHTML = //something from external document;            
-        }
-        function updateReview(){
-            document.getElementById("lastReview").innerHTML = //something from external document;           
+        function update(url){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {   document.getElementById("lastReview").innerHTML = this.responseText;    }   };
+            xhttp.open("GET", url, true);
+            xhttp.send();
         } 
         
         // create up to date page
-        updateReview();     updateComments();
+        update("Heilig_Review");     update("Heilig_Comment");
     </script>
+    <style>
+    mediaquery() // something
+        .background{
+            width = 100%;
+            color = RGB(200,200,200);
+            background_image = "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fs3.amazonaws.com%2Fmedias.photodeck.com%2Fe4c3125a-a14b-11e3-afb3-0b46ba2060e9%2F78645_xgaplus.jpg&f=1";
+            
+        }
+        .currentThread{
+        }
+            .lastReview{
+            }
+            .lastComments{
+            }
+        .commentBlock{
+        }
+        
+    mediaquery() // something
+        .background{
+        }
+        .currentThread{
+        }
+            .lastReview{
+            }
+            .lastComments{
+            }
+        .commentBlock{
+        }        
+    </style>
 </head>
+    
 <body>
     <div id="constrution">
         <s1> Under Construction ;-) <s1>
@@ -25,7 +59,7 @@
             
     <div id="currentThread">
         <p id="lastReview">Cor heeft nog niets van zich laten horen.</p>
-        <p class="lastComments"></p>
+        <p id="lastComments"></p>
     </div>
             
     <div id="commentBlock">
