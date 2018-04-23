@@ -10,7 +10,7 @@
             xhttp.open("POST",url,true);
             xhttp.send(newFileContent);
         }
-        function update(url){
+        function update(id,url){
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {   document.getElementById("lastReview").innerHTML = this.responseText;    }   };
             xhttp.open("GET", url, true);
@@ -18,7 +18,7 @@
         } 
         
         // create up to date page
-        update("Heilig_Review");     update("Heilig_Comment");
+        update("lastReview","Heilig_Review");     update("lastComments","Heilig_Comment");
     </script>
     <style>
     mediaquery() // something
