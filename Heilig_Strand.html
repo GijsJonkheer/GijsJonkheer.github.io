@@ -15,17 +15,28 @@
             xhttp.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {   document.getElementById("lastReview").innerHTML = this.responseText;    }   };
             xhttp.open("GET", url, true);
             xhttp.send();
-        } 
+        }
+        function placeReview(){
+            writeToFile("Heilig_Review);
+            update("lastComments","Heilig_Comment");
+        }
+        function placeComment(){
+            writeToFile("Heilig_Comment");
+            update("lastReview","Heilig_Review");
+        }
         
         // create up to date page
         update("lastReview","Heilig_Review");     update("lastComments","Heilig_Comment");
     </script>
     <style>
         /* standart style*/
+        body{
+            text-align:center;
+        }
         #background{
             width:100%;
-            color:grey;
-            background_image:"https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fs3.amazonaws.com%2Fmedias.photodeck.com%2Fe4c3125a-a14b-11e3-afb3-0b46ba2060e9%2F78645_xgaplus.jpg&f=1";
+            background-color:rgb(255,255,255);
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 100%,rgba(255,255,255,0.6) 100%), url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fs3.amazonaws.com%2Fmedias.photodeck.com%2Fe4c3125a-a14b-11e3-afb3-0b46ba2060e9%2F78645_xgaplus.jpg&f=1");
         }
         #currentThread{
             box
