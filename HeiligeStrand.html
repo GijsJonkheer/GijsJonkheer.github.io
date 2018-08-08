@@ -1,0 +1,81 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+  <style>
+        /* standart style*/
+        body{
+            text-align:center;
+        }
+        #background{
+            width:100%;
+            background-color:rgb(255,255,255);
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 100%,rgba(255,255,255,0.6) 100%), url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fs3.amazonaws.com%2Fmedias.photodeck.com%2Fe4c3125a-a14b-11e3-afb3-0b46ba2060e9%2F78645_xgaplus.jpg&f=1");
+        }
+        
+        #reviewSection #commentSection{
+            width:80%;
+            background:none;
+            border:0,0,1,0;
+        }    
+        textarea{
+            border:1;
+            background-color:RGB(110,250,110);
+            border-radius:10;      
+            width:70%;
+        }
+        
+    /* changes to style based on mediaformat*/
+    @media (max-width = 600){ 
+        #background{
+        }
+        #currentThread{
+        }
+            #lastReview{
+            }
+            #lastComments{
+            }
+        #commentBlock{
+        } #button {width:200; height:100; background-color:RGB(50,10,10);}        
+    }
+    </style>
+</head>
+    
+
+<body id="background">
+
+    <div id="construction">
+        <h1> Under Construction ;-) <h1>
+    </div>
+            
+    <div id="currentThread">
+        <div id="reviewSection">
+            <p id="lastReview">Cor heeft nog niets van !zich laten horen.</p>
+            <textarea id="review" placeholder="en de bokaal is voor ...... "></textarea>
+            <button class="button" id="reviewButton" onclick = placeReview()>zend in</button>
+        </div>
+        <div id="commentSection">
+            <h2>reactie</h2>
+            <textarea id="comments" placeholder="Klopt dit verslag wel, statistisch gezien natuurlijk?"></textarea>
+            <button class = "button" id="commentButton" onclick = placeComment()>zend in</button>
+        </div>
+    </div>
+
+    <div id="footer">
+        <!-- this is a placeholder for possible new functions to the website -->        
+    </div>   
+    </div>
+        
+            <script>
+        function placeReview(){
+            document.getElementById("lastReview").innertext = <p id = "lastReview"> + document.getElementById("review").innerText+ </p>;
+        }
+        function placeComment(){
+            document.getElementById("commentSection").innertext += <p class="comment"> + document.getElementById("comments").innerText+ </p>;
+        }
+        
+        // create up to date page
+        update("lastReview","Heilig_Review");     update("lastComments","Heilig_Comment");
+    </script>
+
+</body>
+</html>
