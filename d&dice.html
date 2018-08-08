@@ -1,0 +1,28 @@
+  <!DOCTYPE>
+  <html>
+  <head>
+    <style>
+      .button{
+      right:20%;
+      background-color:green;
+      }
+    </style>  
+  </head>
+  <body>
+  
+    <div class="button" onclick=diceFunction(20)>20</div> <div id="20"></div>
+    <div class="button" onclick=diceFunction(16)>16</div> <div id="16"></div>
+    <div class="button" onclick=diceFunction(12)>12</div> <div id="12"></div>
+    <div class="button" onclick=diceFunction(10)>10</div> <div id="10"></div>
+    <div class="button" onclick=diceFunction(8)>8</div>   <div id="8"></div>
+    <div class="button" onclick=diceFunction(6)>6</div>   <div id="6"></div>
+    <div class="button" onclick=diceFunction(4)>4</div>   <div id="4"></div>
+
+    <script>
+      function diceFunction(a){
+      var randNumber = Math.floor((Math.random()*a)+1);
+      document.getElementById(a).innerText = randNumber;
+      }
+    </script>
+  </body>
+  </html> 
